@@ -7,13 +7,14 @@ import styles from "../page.module.css"
 
 export default async function StaticPage() {
  const { contents } = await getList();
-
+ 
  // ページの生成された時間を取得
  const time = new Date().toLocaleDateString();
 
  if (!contents || contents.length === 0) {
   return <h2 className={styles.titleH2}>記事がありません。</h2>;
  }
+ 
 
  return (
     <>
