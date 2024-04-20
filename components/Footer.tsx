@@ -4,7 +4,6 @@ import React from 'react';
 import { BottomNavigationAction } from '@mui/material';
 import { Home, Person, Article, AddLocationAlt } from '@mui/icons-material';
 import Link from 'next/link';
-import styles from '@/app/page.module.css'
 import { usePathname } from 'next/navigation';
 
 const Footer = () => {
