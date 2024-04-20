@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: "管理者について - 子供と一緒に電車デビュー！楽しいスポット＆イベント特集",
-  description: "管理者の紹介ページです。私は埼玉県さいたま市在住の42歳で平凡なサラリーマンです。プログラミングが好きで遊びでサイトを作っています。",
+  description: "管理者の紹介ページです。埼玉県さいたま市在住の42歳で平凡なサラリーマンです。プログラミングが好きで遊びでサイトを作っています。",
 };
 
 export default function Page() {
