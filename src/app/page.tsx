@@ -6,6 +6,7 @@ export default function Page() {
   return (
     <>
       <Header />
+      <div className="bg-blue-500 text-white p-4">Hello, Tailwind CSS!</div>
       <Footer />
     </>
   );
