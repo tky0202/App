@@ -9,12 +9,23 @@ import styles from '../page.module.css';
 export default function Page() {
   const mapRef = React.useRef<HTMLDivElement>(null);
   const [videoUrl, setVideoUrl] = useState<string>("");
+    const renderVideoPlayer = () => {
+    const videoPlayerContainer = document.getElementById("video-player");
+    if (videoPlayerContainer && videoUrl) { // videoUrl が空でない場合のみ再生
+      videoPlayerContainer.innerHTML = `
+        <video width="320" height="180" controls autoplay>
+          <source src="${videoUrl}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      `;
+    }
+  };
 
   useEffect(() => {
     const initMap = async () => {
 
       const loader = new Loader({
-        apiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string || functions.config().next_public_google_maps_api,
+        apiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string,
         version:'weekly'
       });
       const { Map } = await loader.importLibrary('maps');
@@ -190,19 +201,8 @@ export default function Page() {
       });
     }
     initMap();
-  }, []);
+  }, [renderVideoPlayer]); 
   
-  const renderVideoPlayer = () => {
-    const videoPlayerContainer = document.getElementById("video-player");
-    if (videoPlayerContainer && videoUrl) { // videoUrl が空でない場合のみ再生
-      videoPlayerContainer.innerHTML = `
-        <video width="320" height="180" controls autoplay>
-          <source src="${videoUrl}" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      `;
-    }
-  };
 
   return (
     <>
