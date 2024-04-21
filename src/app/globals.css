@@ -115,6 +115,23 @@ footer a span {
   font-size:0.7rem!important;
   opacity: 1!important;
 }
+.supplement{
+  font-size: 0.8rem;
+  color: var(--text-low-contrast); 
+  position: relative;
+  text-indent: 1em;
+  margin-bottom:2rem;
+}
+.supplement::before{
+  content: "※";
+  position: absolute;
+  top: 0;
+  left: -0.8em;
+}
+.supplement a{
+  color: var(--text-low-contrast);
+  text-decoration: underline;
+}
 .embla {
   --slide-height: 19rem;
   --slide-spacing: 1rem;
