@@ -70,6 +70,21 @@ export default function Page() {
         lat:35.88189886095311,
         lng:139.6257890226301
       }
+      const position11 ={
+        lat:35.10278233725612,
+        lng:139.076568040353
+      }
+
+      const position12 ={
+        lat:35.679808982832625,
+        lng:139.76766440579755
+      }
+
+      const position13 ={
+        lat:34.975561,
+        lng:139.092232
+      }
+
       const mapOptions: google.maps.MapOptions = {
         center: position1,
         zoom: 13,
@@ -126,6 +141,21 @@ export default function Page() {
       const marker10 = new Marker({
         map: map,
         position: position10
+      });
+
+      const marker11 = new Marker({
+        map: map,
+        position: position11
+      });
+
+      const marker12 = new Marker({
+        map: map,
+        position: position12
+      });
+
+      const marker13 = new Marker({
+        map: map,
+        position: position13
       });
 
       const infoWindow = new google.maps.InfoWindow();
@@ -196,6 +226,27 @@ export default function Page() {
         if (infoWindow) {
           infoWindow.setContent("<iframe  class='map_iframe' src='https://www.youtube.com/embed/rxR7ljbmBTs?si=3mBmhBIrjRpS0nVS&amp;controls=0&amp;autoplay=1&amp;mute=1&amp;rel=0'></iframe>");
           infoWindow.open(map, marker10);
+          renderVideoPlayer();
+        }
+      });
+      marker11.addListener("click", () => {
+        if (infoWindow) {
+          infoWindow.setContent("<iframe  class='map_iframe' src='https://www.youtube.com/embed/0dfWjQBozm4?si=Yfppabh_bJTybXQT&amp;controls=0&amp;autoplay=1&amp;mute=1&amp;rel=0'></iframe>");
+          infoWindow.open(map, marker11);
+          renderVideoPlayer();
+        }
+      });
+      marker12.addListener("click", () => {
+        if (infoWindow) {
+          infoWindow.setContent("<iframe  class='map_iframe' src='https://www.youtube.com/embed/Vry3SCavQ6Q?si=S0dDamh5shXSZS_4&amp;controls=0&amp;autoplay=1&amp;mute=1&amp;rel=0'></iframe>");
+          infoWindow.open(map, marker12);
+          renderVideoPlayer();
+        }
+      });
+      marker13.addListener("click", () => {
+        if (infoWindow) {
+          infoWindow.setContent("<iframe  class='map_iframe' src='https://www.youtube.com/embed/lNjzPQCjIkk?si=c7_Pb0J0fxM5lwp4&amp;controls=0&amp;autoplay=1&amp;mute=1&amp;rel=0'></iframe>");
+          infoWindow.open(map, marker13);
           renderVideoPlayer();
         }
       });
