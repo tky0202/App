@@ -14,11 +14,14 @@
     "@googlemaps/js-api-loader": "^1.16.6",
     "@mui/icons-material": "^5.15.15",
     "@mui/material": "^5.15.15",
+    "embla-carousel": "^8.0.2",
+    "embla-carousel-react": "^8.0.2",
     "html-react-parser": "^5.1.10",
     "microcms-js-sdk": "^3.1.0",
     "next": "14.2.2",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-youtube": "^10.1.0"
   },
   "devDependencies": {
     "@types/google.maps": "^3.55.7",

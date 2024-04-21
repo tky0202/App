@@ -1,12 +1,24 @@
+"use client";
+
 import React from 'react';
+import { Container } from '@mui/material';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import EmblaCarousel from '../../components/EmblaCarousel';
+import { EmblaOptionsType } from 'embla-carousel';
+import styles from '@/app/page.module.css';
+
+const OPTIONS: EmblaOptionsType = {}
+const SLIDE_COUNT = 10
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
 export default function Page() {
   return (
     <>
       <Header />
-      <div className="bg-blue-500 text-white p-4">Hello, Tailwind CSS!</div>
+      <Container maxWidth="lg" className={styles.container}>
+      <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+      </Container>
       <Footer />
     </>
   );
