@@ -4,6 +4,7 @@ import React from 'react';
 import { Container } from '@mui/material';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import News from '../../components/New';
 import EmblaCarousel from '../../components/EmblaCarousel';
 import { EmblaOptionsType } from 'embla-carousel';
 import styles from '@/app/page.module.css';
@@ -17,7 +18,8 @@ export default function Page() {
     <>
       <Header />
       <Container maxWidth="lg" className={styles.container}>
-      <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+        <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+        <News />
       </Container>
       <Footer />
     </>
