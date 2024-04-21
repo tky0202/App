@@ -118,6 +118,17 @@ P.articleListWrapP{
   margin:0;
   padding:0;
 }
+.staticwrap h3{
+  margin-top:2rem;
+  margin-bottom:1rem;
+}
+.staticwrap{
+  margin-bottom:5rem;
+}
+.staticwrap img{
+  margin-top:1rem;
+  margin-bottom:1rem;
+}
 .staticListwrap a{
   text-decoration: none;
 }

@@ -28,10 +28,6 @@ export default async function StaticDetailPage({
 
  const { contents } = await getList();
 
-
- // ページの生成された時間を取得
- const time = new Date().toLocaleString();
-
  const otherPosts = contents.filter((p) => p.id !== postId);
 
  if (!post) {
@@ -44,9 +40,8 @@ export default async function StaticDetailPage({
             <div className={styles.container}>
                 <div className={styles.staticTitle}>
                     <h2 className={styles.titleH2}>{post.title}</h2>
-                    <p className={styles.staticNewdate}>{time}</p>
                 </div>
-                <div className={`${styles.staticwrap} ${styles.mb5}`}>{parse(post.body)}</div>
+                <div className={styles.staticwrap}>{parse(post.body)}</div>
                 <h3 className={styles.titleH3}>その他の記事一覧</h3>
                 <ul className={styles.staticListwrap}>
                     {otherPosts.map((post) => {

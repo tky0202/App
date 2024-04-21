@@ -307,3 +307,11 @@ footer a span {
     height:180px;
   }
 }
+.staticwrap h3{
+  margin-top:2rem;
+  margin-bottom:1rem;
+}
+.staticwrap img{
+  margin-top:1rem;
+  margin-bottom:1rem;
+}
