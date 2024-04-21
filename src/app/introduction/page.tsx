@@ -30,11 +30,11 @@ export default function Page() {
         <h4 className={styles.titleH4}>JavaScriptフレームワーク</h4>
         <p className={styles.container_paragraph}>React<br />Next.js 14.1.4</p>
         <h4 className={styles.titleH4}>開発プラットフォーム</h4>
-        <p className={styles.container_paragraph}>Firebase</p>
+        <p className={styles.container_paragraph}>Netlify</p>
         <h4 className={styles.titleH4}>AI画像生成ツール</h4>
         <p className={styles.container_paragraph}>Image Creator from Designer<br />(旧Bing Image Creator)<br /></p>
         <h4 className={styles.titleH4}>UIフレームワーク</h4>
-        <p className={styles.container_paragraph}>MUI</p>
+        <p className={styles.container_paragraph}>MUI<br />Tailwind CSS</p>
         <h4 className={styles.titleH4}>CMS</h4>
         <p className={styles.container_paragraph}>microCMS</p>
         <h4 className={styles.titleH4}>その他</h4>
