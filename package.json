@@ -14,6 +14,7 @@
     "@googlemaps/js-api-loader": "^1.16.6",
     "@mui/icons-material": "^5.15.15",
     "@mui/material": "^5.15.15",
+    "@next/third-parties": "^14.3.0-canary.14",
     "embla-carousel": "^8.0.2",
     "embla-carousel-react": "^8.0.2",
     "html-react-parser": "^5.1.10",
