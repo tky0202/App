@@ -34,6 +34,11 @@ const Header = () => {
               <ListItemText primary={'電車スポット'} />
             </Link>
           </ListItem>
+          <ListItem button key={'電車情報'}>
+            <Link href="/static">
+              <ListItemText primary={'電車情報'} />
+            </Link>
+          </ListItem>
           <ListItem button key={'管理者'}>
             <Link href="/introduction">
               <ListItemText primary={'管理者'} />
