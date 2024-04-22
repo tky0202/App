@@ -1,6 +1,8 @@
   
   .mb0{margin-bottom: 0!important;}
   .mb5{margin-bottom: 5rem!important;}
+  .p1{padding:1rem!important;}
+  .pb5{padding-bottom:5rem!important;}
   .footerAction {
     color:var(--brand-primary);
   }
@@ -159,4 +161,9 @@ P.articleListWrapP{
     font-size: 0.8rem;
     padding: 0% 2%;
   }
+}
+.discription{
+  font-size: 0.8rem;
+  color:var(--text-medium-contrast);
+  margin-bottom: 1rem;
 }
