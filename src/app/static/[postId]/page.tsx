@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import parse from "html-react-parser";
 import { getDetail, getList } from "../../../../microcms";
@@ -33,6 +34,10 @@ export default async function StaticDetailPage({
  if (!post) {
   notFound();
  }
+const metadata: Metadata = {
+    title: `${post.title} - 子供と一緒に電車デビュー！楽しいスポット＆イベント特集`,
+    description: "息子と一緒にお出かけした記録を公開しています。積極的に電車イベントに参加していますので、もし同じ計画を立てている方がいれば少しでも参考になれば嬉しいです。",
+};
 
  return (
     <>
