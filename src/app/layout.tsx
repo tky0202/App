@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { GoogleAdScript } from "../../components/googleads-script";
 import { GoogleTagManager, GoogleAnalytics } from '@next/third-parties/google'
 import "./globals.css";
 
@@ -20,7 +19,6 @@ export default function RootLayout({
         {children}
         <GoogleTagManager gtmId="G-WME5BXPEKS" />
         <GoogleAnalytics gaId="G-WME5BXPEKS" />
-        <GoogleAdScript />
       </body>
     </html>
   );
