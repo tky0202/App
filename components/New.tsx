@@ -10,6 +10,10 @@ const ArticleList = () => {
                 <h2 className={styles.titleH2}>更新情報</h2>
                 <ul>
                     <li className={styles.articleListWrap}>
+                        <p className={styles.articleListWrapP}><span className={styles.articleListWrapdata}>4月26日</span></p>
+                        <p className={styles.articleListWrapP}><Link href='/static'>電車情報を更新しました。</Link></p>
+                    </li>
+                    <li className={styles.articleListWrap}>
                         <p className={styles.articleListWrapP}><span className={styles.articleListWrapdata}>4月20日</span></p>
                         <p className={styles.articleListWrapP}><Link href='/static'>電車情報を公開しました。</Link></p>
                     </li>
