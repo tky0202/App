@@ -7,8 +7,8 @@ import { getList } from "../../../microcms";
 import styles from "../page.module.css"
 
 export const metadata: Metadata = {
-    title: "電車情報 - 子供と一緒に電車デビュー！楽しいスポット＆イベント特集",
-    description: "息子と一緒にお出かけした記録を公開しています。積極的に電車イベントに参加していますので、もし同じ計画を立てている方がいれば少しでも参考になれば嬉しいです。",
+    title: "子育て日記 - 子供と一緒に電車デビュー！楽しいスポット＆イベント特集",
+    description: "息子と一緒にお出かけした記録を公開しています。電車イベントだけではなく旅行にもたくさん行っているので、もし同じ計画を立てている方がいれば少しでも参考になれば嬉しいです。",
   };
 
 export default async function StaticPage() {
@@ -27,10 +27,10 @@ export default async function StaticPage() {
         <Header />
             <div className={styles.container}>
                 <div className={styles.staticTitle}>
-                    <h2 className={styles.titleH2}>電車情報</h2>
+                    <h2 className={styles.titleH2}>子育て日記</h2>
                     <p className={styles.staticNewdate}>最終更新日：{time}</p>
                 </div>
-                <p className={styles.discription}>息子と一緒にお出かけした記録を公開しています。積極的に電車イベントに参加していますので、もし同じ計画を立てている方がいれば少しでも参考になれば嬉しいです。</p>
+                <p className={styles.discription}>息子と一緒にお出かけした記録を公開しています。電車イベントだけではなく旅行にもたくさん行っているので、もし同じ計画を立てている方がいれば少しでも参考になれば嬉しいです。</p>
                 <h3 className={styles.titleH3}>記事一覧</h3>
                 <ul className={styles.staticListwrap}>
                     {contents.map((post) => {

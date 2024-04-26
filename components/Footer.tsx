@@ -33,7 +33,7 @@ const Footer = () => {
               href="/static"
               icon={<Article />}
               disabled={pathname === '/static'}
-              label="電車情報"
+              label="子育て日記"
               className={`${styles.footerAction} ${pathname === '/static' ? '' : styles.footerActionDisabled}`}
             />
            <BottomNavigationAction

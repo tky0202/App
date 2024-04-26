@@ -35,8 +35,8 @@ export default async function StaticDetailPage({
   notFound();
  }
 const metadata: Metadata = {
-    title: `${post.title} - 子供と一緒に電車デビュー！楽しいスポット＆イベント特集`,
-    description: "息子と一緒にお出かけした記録を公開しています。積極的に電車イベントに参加していますので、もし同じ計画を立てている方がいれば少しでも参考になれば嬉しいです。",
+    title: `子育て日記 - 子供と一緒に電車デビュー！楽しいスポット＆イベント特集`,
+    description: "息子と一緒にお出かけした記録を公開しています。電車イベントだけではなく旅行にもたくさん行っているので、もし同じ計画を立てている方がいれば少しでも参考になれば嬉しいです。",
 };
 
  return (
