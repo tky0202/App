@@ -15,6 +15,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja" className="theme-light">
+      <head>
+        <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR_PUBLISHER_ID"
+            crossOrigin="anonymous"
+          />
+      </head>
       <body>
         {children}
         <GoogleTagManager gtmId="G-WME5BXPEKS" />
