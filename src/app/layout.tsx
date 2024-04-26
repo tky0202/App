@@ -17,10 +17,9 @@ export default function RootLayout({
     <html lang="ja" className="theme-light">
       <head>
         <script
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR_PUBLISHER_ID"
-            crossOrigin="anonymous"
-          />
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_GOOGLE_ADSENSE}`}
+          crossOrigin="anonymous"></script>
       </head>
       <body>
         {children}
