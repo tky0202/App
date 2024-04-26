@@ -5,9 +5,11 @@ import { Container } from '@mui/material';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import News from '../../components/New';
+import styles from '@/app/page.module.css';
+
 import EmblaCarousel from '../../components/EmblaCarousel';
 import { EmblaOptionsType } from 'embla-carousel';
-import styles from '@/app/page.module.css';
+
 
 const OPTIONS: EmblaOptionsType = {}
 const SLIDE_COUNT = 10
