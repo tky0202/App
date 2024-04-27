@@ -1,4 +1,4 @@
-import { Metadata } from 'next'
+import { Metadata, ResolvingMetadata } from 'next'
 import { notFound } from "next/navigation";
 import parse from "html-react-parser";
 import { getDetail, getList } from "../../../../microcms";
@@ -7,6 +7,19 @@ import Footer from '../../../../components/Footer';
 import styles from "../../page.module.css"
 import Link from "next/link";
 import Image from "next/image";
+
+type Props = {
+	params: { postId: string };
+};
+
+export async function generateMetadata(props: Props): Promise<Metadata> {
+	const id = props.params.postId;
+	const article = await getDetail(id);
+	return {
+		title: `${article.title} - 子供と一緒に電車デビュー！楽しいスポット＆イベント特集`,
+        description: "息子と一緒にお出かけした記録を公開しています。電車イベントだけではなく旅行にもたくさん行っているので、もし同じ計画を立てている方がいれば少しでも参考になれば嬉しいです。",
+	};
+}
 
 
 export async function generateStaticParams() {
@@ -36,11 +49,6 @@ export default async function StaticDetailPage({
   notFound();
  }
  
- 
-const generateMetadata: Metadata = {
-    title: `${post.title} - 子供と一緒に電車デビュー！楽しいスポット＆イベント特集`,
-    description: "息子と一緒にお出かけした記録を公開しています。電車イベントだけではなく旅行にもたくさん行っているので、もし同じ計画を立てている方がいれば少しでも参考になれば嬉しいです。",
-};
 
  return (
     <>
