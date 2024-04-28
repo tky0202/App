@@ -253,8 +253,8 @@ footer a span {
   background-color: var(--text-body);
 }
 .embla_iframe{
-  width:640px;
-  height:400px;
+  width:320px;
+  height:210px;
   margin:0rem 1rem;
   padding: 1rem 0rem;
   background: #000000;
@@ -265,8 +265,8 @@ footer a span {
   }
 }
 .embla_iframe iframe{
-  width:640px;
-  height:360px;
+  width:320px;
+  height:180px;
   @media (max-width: 600px) {
     width:320px;
     height:180px;
