@@ -149,6 +149,7 @@ P.articleListWrapP{
   @media (max-width: 600px) {
   width: calc(100% / 2);
   margin-left:0rem;
+  margin-right:0rem;
   text-align: center;
   }
 }
