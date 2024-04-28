@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Header from '../../../components/Header';
+import Static from '../../../components/Static';
 import Footer from '../../../components/Footer';
 import { getList } from "../../../microcms";
 import styles from "../page.module.css"
@@ -31,19 +32,7 @@ export default async function StaticPage() {
                     <p className={styles.staticNewdate}>最終更新日：{time}</p>
                 </div>
                 <p className={styles.discription}>息子と一緒にお出かけした記録を公開しています。電車イベントだけではなく旅行にもたくさん行っているので、もし同じ計画を立てている方がいれば少しでも参考になれば嬉しいです。</p>
-                <h3 className={styles.titleH3}>記事一覧</h3>
-                <ul className={styles.staticListwrap}>
-                    {contents.map((post) => {
-                    return (
-                    <li key={post.id} className={styles.staticList}>
-                        <Link href={`/static/${post.id}`}>
-                            <Image src={post.img.url} alt={post.title} width={192} height={256} className={styles.staticListimg} />
-                            <h4 className={`${styles.staticListtitle} ${styles.titleH4}`}>{post.title}</h4>
-                        </Link>
-                    </li>
-                    );
-                    })}
-                </ul>
+                <Static />
             </div>
         <Footer />
     </>
