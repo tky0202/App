@@ -11,7 +11,7 @@ const Gamelist = () => {
             <ul className={styles.staticListwrap}>
                 <li className={styles.staticList}>
                     <Link href="./game/block">
-                        <p><Image src="/blockgame.webp" alt="管理者" width={300} height={300} className={styles.GameImageList} /></p>
+                        <p><Image src="/blockgame.webp" alt="ブロック崩し" width={300} height={300} className={styles.GameImageList} /></p>
                         <h4 className={`${styles.staticListtitle} ${styles.titleH4}`}>ブロック崩し</h4>
                     </Link>
                 </li>

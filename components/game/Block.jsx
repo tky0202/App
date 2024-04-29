@@ -6,6 +6,8 @@ import styles from '../../src/app/page.module.css';
 const BlockMain = () => {
   const [elapsedTime, setElapsedTime] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
+  const [destroyedBlockCount, setDestroyedBlockCount] = useState(0); // destroyedBlockCount を state として管理する
+
   const intervalRef = useRef(null);
   const canvasRef = useRef(null);
   const gameRef = useRef({
@@ -107,27 +109,60 @@ const BlockMain = () => {
 
     // ブロックとの当たり判定
     let allBlocksDestroyed = true; // すべてのブロックが破壊されたかどうかのフラグ
+    
     blocks.forEach((block) => {
       if (!block.isDestroyed) {
         allBlocksDestroyed = false; // まだ破壊されていないブロックがある
         if (ball.x > block.x && ball.x < block.x + block.width && ball.y > block.y && ball.y < block.y + block.height) {
           ball.dy = -ball.dy;
           block.isDestroyed = true;
+    
+          // 破壊されたブロックの数をカウントアップ
+          setDestroyedBlockCount((prevCount) => prevCount + 1);
         }
       }
     });
-
-    if (allBlocksDestroyed) {
-      // すべてのブロックが破壊された場合、ゲームクリアの処理
-      const endTime = new Date();
-      const timeDiff = endTime - startTimeRef.current;
-      const seconds = Math.floor(timeDiff / 1000);
-
-      alert(`ゲームクリア！\nクリアにかかった時間：${seconds}秒`);
-
-      document.location.reload();
-      return;
+    
+    if ((destroyedBlockCount + 1) % 5 === 0) {
+      const multiplier = Math.floor((destroyedBlockCount + 1) / 5);
+      ball.dx *= 1 + 2 * multiplier;
+      ball.dy *= 1 + 2 * multiplier;
     }
+
+  // ゲームオーバー時の処理
+  const handleGameOver = () => {
+    // ゲームオーバーの処理を実行
+    setIsRunning(false);
+    alert('GAME OVER');
+    // ゲームをリセット
+    resetGame();
+  };
+
+// ゲームをリセットする関数
+const resetGame = () => {
+  setElapsedTime(0);
+  setDestroyedBlockCount(0);
+  gameRef.current.blocks.forEach((block) => {
+    block.isDestroyed = false;
+  });
+  startGame(); // ゲームを再開
+};
+
+// ブロックとの当たり判定後にゲームオーバーのチェックを行う
+if (allBlocksDestroyed) {
+  // すべてのブロックが破壊された場合、ゲームクリアの処理
+  const endTime = new Date();
+  const timeDiff = endTime - startTimeRef.current;
+  const seconds = Math.floor(timeDiff / 1000);
+
+  alert(`ゲームクリア！\nクリアにかかった時間：${seconds}秒`);
+
+  // ゲームをリセット
+  resetGame();
+} else if (ball.y + ball.dy > canvas.height - ball.radius) {
+  // パドルに当たらず画面下に落ちた場合、ゲームオーバーの処理を実行
+  handleGameOver();
+}
 
 
     ball.x += ball.dx;
@@ -165,7 +200,7 @@ const BlockMain = () => {
     ball.dy = -4; // y方向の速度
 
     paddle.x = (canvas.width - paddle.width) / 2;
-
+   
     // ブロックの初期化
     const blockRowCount = 5;
     const blockColumnCountSP = 4;
@@ -238,7 +273,7 @@ const BlockMain = () => {
 
   return (
     <div className={styles.blockGameContents}>
-      <p>経過時間: {elapsedTime}秒</p>
+      <p>経過時間: {elapsedTime}秒　ブロックを壊した数：{destroyedBlockCount/2}個</p>
       <canvas ref={canvasRef} className={styles.blockGameDetail} />
       <div className={styles.gameStartButton}>
         <button onClick={startGame}>ゲームスタート</button>
