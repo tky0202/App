@@ -208,3 +208,32 @@ P.articleListWrapP{
   color: var(--background-code);
   transition: background-color 0.3s ease;
 }
+.blockGameContents{
+  margin:0px auto;
+  padding:1rem 0px;
+  width:765px;
+  @media (max-width: 600px) {
+    width: 330px;
+  }
+}
+.blockGameDetail{
+  background-color: var(--detail-low-contrast);
+  width:765px;
+  height:500px;
+  @media (max-width: 600px) {
+    width: 330px;
+    height:400px;
+  }
+}
+.gameStartButton{
+  background-color: var(--brand-primary);
+  color: var(--background-code);
+  width: 200px;
+  border-radius: 10px;
+  padding: 0.5rem 0rem;
+  text-align: center;
+  margin: 1rem auto;
+}
+.GameImageList{
+  border-radius: 10px;
+}

@@ -6,6 +6,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import News from '../../components/New';
 import Static from '../../components/Static';
+import Gamelist from '../../components/game/Gamelist'
 import styles from '@/app/page.module.css';
 import EmblaCarousel from '../../components/EmblaCarousel';
 import { EmblaOptionsType } from 'embla-carousel';
@@ -24,6 +25,7 @@ export default function Page() {
           <EmblaCarousel slides={SLIDES} options={OPTIONS} />
           <News />
           <Static />
+          <Gamelist />
         </Container>
       <Footer />
     </>

@@ -30,7 +30,7 @@ const StaticPage: React.FC = () => {
     return (
         <>
             <h3 className={styles.titleH3}>記事一覧</h3>
-            <ul className={styles.staticListwrap}>
+            <ul className={`${styles.staticListwrap} ${styles.mb5}`}>
                 {contents.map((post) => (
                     <li key={post.id} className={styles.staticList}>
                         <Link href={`/static/${post.id}`}>
