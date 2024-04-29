@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Header from '../../../../components/Header';
+import Footer from '../../../../components/Footer';
 import Block from '../../../../components/game/Block';
 
 export const metadata: Metadata = {
@@ -10,7 +12,9 @@ export default function Page() {
 
   return (
     <>
+        <Header />
         <Block />
+        <Footer />
     </>
   );
 }

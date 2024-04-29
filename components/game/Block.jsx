@@ -124,7 +124,7 @@ const BlockMain = () => {
     const timeDiff = endTime - startTimeRef.current;
     const seconds = Math.floor(timeDiff / 1000);
 
-    alert(`ゲームクリア！　おめでとうございます😁\nクリアにかかった時間：${seconds}秒`);
+    alert(`ゲームクリア！\nクリアにかかった時間：${seconds}秒`);
 
     document.location.reload();
     return;
@@ -138,14 +138,21 @@ const BlockMain = () => {
 };
 
   // マウスの位置に応じてパドルの位置を更新
-  const mouseMoveHandler = (e) => {
+  const moveHandler = (e) => {
     const canvas = canvasRef.current;
     const { paddle } = gameRef.current;
-    const relativeX = e.clientX - canvas.offsetLeft;
+    let relativeX;
+    if (e.type === 'touchmove') {
+      e.preventDefault(); // タッチのデフォルト動作を停止
+      relativeX = e.touches[0].clientX - canvas.offsetLeft;
+    } else {
+      relativeX = e.clientX - canvas.offsetLeft;
+    }
     if (relativeX > 0 && relativeX < canvas.width) {
       paddle.x = relativeX - paddle.width / 2;
     }
   };
+
 
   // useEffect 内の ball.x, ball.y の初期化部分
   useEffect(() => {
@@ -176,10 +183,12 @@ const BlockMain = () => {
       }
     }
 
-    canvas.addEventListener("mousemove", mouseMoveHandler);
+  canvas.addEventListener("mousemove", moveHandler);
+  canvas.addEventListener("touchmove", moveHandler);
 
-    return () => {
-      canvas.removeEventListener("mousemove", mouseMoveHandler);
+  return () => {
+    canvas.removeEventListener("mousemove", moveHandler);
+    canvas.removeEventListener("touchmove", moveHandler);
     };
   }, []);
 
