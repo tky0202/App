@@ -30,7 +30,7 @@ const BlockMain = () => {
   const drawBall = (ctx, ball) => {
     ctx.beginPath();
     ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
-    ctx.fillStyle = "#0095DD";
+    ctx.fillStyle = "#2f70c1";
     ctx.fill();
     ctx.closePath();
   };
@@ -39,7 +39,7 @@ const BlockMain = () => {
   const drawPaddle = (ctx, paddle, canvas) => {
     ctx.beginPath();
     ctx.rect(paddle.x, canvas.height - paddle.height, paddle.width, paddle.height);
-    ctx.fillStyle = "#0095DD";
+    ctx.fillStyle = "#2f70c1";
     ctx.fill();
     ctx.closePath();
   };
@@ -50,7 +50,7 @@ const BlockMain = () => {
       if (!block.isDestroyed) {
         ctx.beginPath();
         ctx.rect(block.x, block.y, block.width, block.height);
-        ctx.fillStyle = "#0095DD";
+        ctx.fillStyle = "#2f70c1";
         ctx.fill();
         ctx.closePath();
       }
@@ -109,17 +109,14 @@ const BlockMain = () => {
   blocks.forEach((block) => {
     if (!block.isDestroyed) {
       allBlocksDestroyed = false; // まだ破壊されていないブロックがある
-      if (
-        ball.x > block.x &&
-        ball.x < block.x + block.width &&
-        ball.y > block.y &&
-        ball.y < block.y + block.height
-      ) {
-        block.isDestroyed = true;
+      if (ball.x > block.x && ball.x < block.x + block.width && ball.y > block.y && ball.y < block.y + block.height) {
         ball.dy = -ball.dy;
+        block.isDestroyed = true;
       }
     }
   });
+
+  
 
   if (allBlocksDestroyed) {
     // すべてのブロックが破壊された場合、ゲームクリアの処理
@@ -132,6 +129,7 @@ const BlockMain = () => {
     document.location.reload();
     return;
   }
+
 
   ball.x += ball.dx;
   ball.y += ball.dy;

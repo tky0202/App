@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import styles from '../page.module.css';
 import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
-import GameBlock from '../../../components/GameBlock';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: "管理者について - 子供と一緒に電車デビュー！楽しいスポット＆イベント特集",
-  description: "管理者の紹介ページです。埼玉県さいたま市在住の42歳で平凡なサラリーマンです。プログラミングが好きで遊びでサイトを作っています。",
+  title: "ゲーム - 子供と一緒に電車デビュー！楽しいスポット＆イベント特集",
+  description: "子供と遊べるゲーム一覧です。",
 };
 
 export default function Page() {
@@ -16,7 +16,9 @@ export default function Page() {
       <Header />
       <div className={styles.container}>
         <h2 className={styles.titleH2}>ゲーム</h2>
-        <GameBlock />
+        <ul>
+          <li><Link href="./game/block">ブロック崩し</Link></li>
+        </ul>
       </div>
       <Footer />
     </>
