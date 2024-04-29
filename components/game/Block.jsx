@@ -273,7 +273,7 @@ if (allBlocksDestroyed) {
 
   return (
     <div className={styles.blockGameContents}>
-      <p>経過時間: {elapsedTime}秒　ブロックを壊した数：{destroyedBlockCount/2}個</p>
+      <p>経過時間: {elapsedTime}秒　ブロックを壊した数：{destroyedBlockCount}個</p>
       <canvas ref={canvasRef} className={styles.blockGameDetail} />
       <div className={styles.gameStartButton}>
         <button onClick={startGame}>ゲームスタート</button>
