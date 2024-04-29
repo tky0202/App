@@ -9,7 +9,7 @@ import styles from "../page.module.css"
 
 export const metadata: Metadata = {
     title: "子育て日記 - 子供と一緒に電車デビュー！楽しいスポット＆イベント特集",
-    description: "息子と一緒にお出かけした記録を公開しています。電車イベントだけではなく旅行にもたくさん行っているので、もし同じ計画を立てている方がいれば少しでも参考になれば嬉しいです。",
+    description: "息子と一緒にお出かけした思い出を投稿しています。電車イベントだけでなく、旅行にもたくさん行っているので、もし同じ計画を立てている方がいれば少しでも参考になれば嬉しいです。",
   };
 
 export default async function StaticPage() {
@@ -31,7 +31,7 @@ export default async function StaticPage() {
                     <h2 className={styles.titleH2}>子育て日記</h2>
                     <p className={styles.staticNewdate}>最終更新日：{time}</p>
                 </div>
-                <p className={styles.discription}>息子と一緒にお出かけした記録を公開しています。電車イベントだけではなく旅行にもたくさん行っているので、もし同じ計画を立てている方がいれば少しでも参考になれば嬉しいです。</p>
+                <p className={styles.discription}>息子と一緒にお出かけした思い出を投稿しています。電車イベントだけでなく、旅行にもたくさん行っているので、もし同じ計画を立てている方がいれば少しでも参考になれば嬉しいです。</p>
                 <Static />
             </div>
         <Footer />

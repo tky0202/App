@@ -24,12 +24,12 @@ const StaticPage: React.FC = () => {
     }, []);
 
     if (!contents || contents.length === 0) {
-        return <h3 className={styles.titleH3}>記事がありません。</h3>;
+        return <h3 className={styles.titleH3}>投稿がありません。</h3>;
     }
 
     return (
         <>
-            <h3 className={styles.titleH3}>記事一覧</h3>
+            <h3 className={styles.titleH3}>投稿一覧</h3>
             <ul className={`${styles.staticListwrap} ${styles.mb5}`}>
                 {contents.map((post) => (
                     <li key={post.id} className={styles.staticList}>

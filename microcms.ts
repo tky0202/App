@@ -10,6 +10,7 @@ import type {
 export type Blog = {
  id: string;
  title: string;
+ caption: string;
  body: string;
  date: string;
  img: MicroCMSImage;

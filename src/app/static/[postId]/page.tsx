@@ -17,7 +17,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 	const article = await getDetail(id);
 	return {
 		title: `${article.title} - 子供と一緒に電車デビュー！楽しいスポット＆イベント特集`,
-        description: "息子と一緒にお出かけした記録を公開しています。電車イベントだけではなく旅行にもたくさん行っているので、もし同じ計画を立てている方がいれば少しでも参考になれば嬉しいです。",
+        description: `${article.caption}息子と一緒にお出かけした記録を公開しています。電車イベントだけではなく旅行にもたくさん行っているので、もし同じ計画を立てている方がいれば少しでも参考になれば嬉しいです。`,
 	};
 }
 

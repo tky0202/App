@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { BottomNavigationAction } from '@mui/material';
-import { Home, Person, Article, AddLocationAlt } from '@mui/icons-material';
+import { Home, Person, Article, AddLocationAlt, SportsEsports } from '@mui/icons-material';
 import Link from 'next/link';
 import styles from '@/app/page.module.css'
 import { usePathname } from 'next/navigation';
@@ -38,11 +38,11 @@ const Footer = () => {
             />
            <BottomNavigationAction
               LinkComponent={Link}
-              href="/introduction"
-              icon={<Person />}
-              disabled={pathname === '/introduction'}
-              label="管理者"
-              className={`${styles.footerAction} ${pathname === '/introduction' ? '' : styles.footerActionDisabled}`}
+              href="/game"
+              icon={<SportsEsports />}
+              disabled={pathname === '/gamen'}
+              label="ゲーム"
+              className={`${styles.footerAction} ${pathname === '/game' ? '' : styles.footerActionDisabled}`}
             />
           <p className={`${styles.footerCopy}`}>
             ©️ tky0202

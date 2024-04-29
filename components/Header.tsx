@@ -39,7 +39,12 @@ const Header = () => {
               <ListItemText primary={'子育て日記'} />
             </Link>
           </ListItem>
-          <ListItem button key={'管理者'}>
+          <ListItem button key={'ゲーム'}>
+            <Link href="/game">
+              <ListItemText primary={'ゲーム'} />
+            </Link>
+          </ListItem>
+         <ListItem button key={'管理者'}>
             <Link href="/introduction">
               <ListItemText primary={'管理者'} />
             </Link>
