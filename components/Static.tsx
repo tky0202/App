@@ -34,7 +34,7 @@ const StaticPage: React.FC = () => {
                 {contents.map((post) => (
                     <li key={post.id} className={styles.staticList}>
                         <Link href={`/static/${post.id}`}>
-                            <Image src={post.img.url} alt={post.title} width={192} height={256} className={styles.staticListimg} />
+                            <p><Image src={post.img.url} alt={post.title} width={192} height={256} className={styles.staticListimg} /></p>
                             <h4 className={`${styles.staticListtitle} ${styles.titleH4}`}>{post.title.length > 17 ? `${post.title.slice(0, 17)}...` : post.title}</h4>
                         </Link>
                     </li>
