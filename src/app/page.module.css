@@ -239,8 +239,11 @@ P.articleListWrapP{
 }
 .embla {
   position:relative;
-  width: 1200px;
 }
 .emblaContainer {
   display: flex;
+  @media (max-width: 600px) {
+    width: 320px;
+    margin:0px auto;
+  }
 }

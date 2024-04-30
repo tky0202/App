@@ -48,7 +48,7 @@ const EmblaCarousel = () => {
     if (windowWidth >= 600) {
       return "width: 340px; height: 250px; margin: 0 1rem;";
     } else {
-      return "width: 100vw; height: 210px; margin: 0rem;margin-top:-3%;";
+      return "width: 320px; height: 210px;";
     }
   };
 
