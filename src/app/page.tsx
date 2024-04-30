@@ -9,12 +9,6 @@ import Static from '../../components/Static';
 import Gamelist from '../../components/game/Gamelist'
 import styles from '@/app/page.module.css';
 import EmblaCarousel from '../../components/EmblaCarousel';
-import { EmblaOptionsType } from 'embla-carousel';
-
-
-const OPTIONS: EmblaOptionsType = {}
-const SLIDE_COUNT = 10
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
 export default function Page() {
   return (
@@ -22,7 +16,7 @@ export default function Page() {
       <Header />
         <h2 className={styles.topH2}>子供が楽しめる電車スポットやイベントを紹介</h2>
         <Container maxWidth="lg" className={styles.container}>
-          <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+          <EmblaCarousel />
           <News />
           <Static />
           <Gamelist />
