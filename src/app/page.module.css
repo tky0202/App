@@ -30,7 +30,7 @@
     }
   }
   .titleH1Nav{
-    position: absolute;
+    position: absolute!important;
     top: 8px;
     left: 20px;
   }
@@ -145,7 +145,7 @@ P.articleListWrapP{
   margin-left:1rem;
   margin-right:1rem;
   margin-bottom: 2rem;
-  width:151px;
+  width:160px;
   @media (max-width: 600px) {
   width: calc(100% / 2);
   margin-left:0rem;
