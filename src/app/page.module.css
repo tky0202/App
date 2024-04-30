@@ -145,7 +145,7 @@ P.articleListWrapP{
   margin-left:1rem;
   margin-right:1rem;
   margin-bottom: 2rem;
-  width:160px;
+  width:187px;
   @media (max-width: 600px) {
   width: calc(100% / 2);
   margin-left:0rem;
@@ -236,4 +236,11 @@ P.articleListWrapP{
 }
 .GameImageList{
   border-radius: 10px;
+}
+.embla {
+  position:relative;
+  width: 1200px;
+}
+.emblaContainer {
+  display: flex;
 }

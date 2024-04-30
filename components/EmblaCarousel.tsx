@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import styles from '@/app/page.module.css';
 import { YouTubeEmbed } from "@next/third-parties/google";
 
 const EmblaCarousel = () => {
@@ -45,15 +46,15 @@ const EmblaCarousel = () => {
 
   const getVideoStyle = (): string => {
     if (windowWidth >= 600) {
-      return "width: 363px; height: 250px; margin: 0 1rem;";
+      return "width: 340px; height: 250px; margin: 0 1rem;";
     } else {
       return "width: 100vw; height: 210px; margin: 0rem;margin-top:-3%;";
     }
   };
 
   return (
-    <div className="embla">
-      <div className="embla__container">
+    <div className={styles.embla}>
+      <div className={styles.emblaContainer}>
         {generateRandomVideoIds(videoCount).map((videoId, index) => (
           <YouTubeEmbed
             key={index}
