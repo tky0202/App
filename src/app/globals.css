@@ -1,31 +1,24 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background-site);
-  font-family: Inter, 'system-ui', -apple-system, BlinkMacSystemFont, 'Segoe UI',Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji','Segoe UI Symbol';
+  font-family:
+    Inter,
+    "system-ui",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol";
 }
 *,
 *::before,
@@ -73,73 +66,77 @@ body {
   --admonition-warning-rgb-value: 255, 196, 9;
   --admonition-danger-rgb-value: 220, 38, 38;
 }
-body a{
-  color:var(--brand-primary);
+body a {
+  color: var(--brand-primary);
 }
-body a:hover{
+body a:hover {
   opacity: 0.8;
 }
-header{
+header {
   width: 100%;
-  height:56px;
+  height: 56px;
   position: relative;
   background-color: var(--background-code);
   -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+  box-shadow:
+    0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 10px 0px rgba(0, 0, 0, 0.12);
 }
-h1{
-  margin:0px!important;
+h1 {
+  margin: 0px !important;
 }
-ol, ul {
+ol,
+ul {
   list-style-type: none;
 }
 footer {
   position: fixed;
-  bottom:0;
-  width:100%;
+  bottom: 0;
+  width: 100%;
   background-color: var(--background-code);
   text-align: center;
 }
-footer svg{
-  margin-bottom:5%;
+footer svg {
+  margin-bottom: 5%;
 }
 footer a span {
-  font-size:0.7rem!important;
-  opacity: 1!important;
+  font-size: 0.7rem !important;
+  opacity: 1 !important;
 }
-.supplement{
+.supplement {
   font-size: 0.8rem;
-  color: var(--text-low-contrast); 
+  color: var(--text-low-contrast);
   position: relative;
   text-indent: 1em;
-  margin-bottom:2rem;
+  margin-bottom: 2rem;
 }
-.supplement::before{
+.supplement::before {
   content: "※";
   position: absolute;
   top: 0;
   left: -0.8em;
 }
-.supplement a{
+.supplement a {
   color: var(--text-low-contrast);
   text-decoration: underline;
 }
-.map_iframe{
-  width:100%;
-  height:200px;
+.map_iframe {
+  width: 100%;
+  height: 200px;
   border-radius: 8px;
   border: none;
   @media (max-width: 600px) {
-    width:100%;
-    height:180px;
+    width: 100%;
+    height: 180px;
   }
 }
-.staticwrap h3{
-  margin-top:2rem;
-  margin-bottom:1rem;
+.staticwrap h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
-.staticwrap img{
-  margin-top:1rem;
-  margin-bottom:1rem;
+.staticwrap img {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }

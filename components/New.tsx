@@ -2,7 +2,7 @@ import React, {} from 'react';
 import Link from 'next/link';
 import styles from '@/app/page.module.css';
 
-const ArticleList = () => {
+const New = () => {
 
     return (
         <>
@@ -31,4 +31,4 @@ const ArticleList = () => {
     );
 };
 
-export default ArticleList;
+export default New;
