@@ -5,7 +5,7 @@ import { Container } from '@mui/material';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import styles from '@/app/page.module.css';
-import dynamic from 'next/dynamic'
+import dynamic from 'next/dynamic';
 
 const EmblaCarousel = dynamic(() => import('../../components/EmblaCarousel'))
 const New = dynamic(() => import('../../components/New'))
@@ -22,7 +22,6 @@ export default function Page() {
         <Container maxWidth="lg" className={styles.container}>
           <EmblaCarousel />
           <New />
-          <Gamelist />
           <Static />
         </Container>
       <Footer />
