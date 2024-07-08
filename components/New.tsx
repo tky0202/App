@@ -21,10 +21,6 @@ const New = () => {
                         <p className={styles.articleListWrapP}><span className={styles.articleListWrapdata}>4月16日</span></p>
                         <p className={styles.articleListWrapP}><Link href='./map'>電車スポットを公開しました。</Link></p>
                     </li>
-                    <li className={styles.articleListWrap}>
-                        <p className={styles.articleListWrapP}><span className={styles.articleListWrapdata}>4月13日</span></p>
-                        <p className={styles.articleListWrapP}><Link href='/'>ホームページを公開しました。</Link></p>
-                    </li>
                 </ul>
             </div>
         </>
