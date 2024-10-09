@@ -20,7 +20,7 @@ export default function Page() {
       <Header />
         <h2 className={styles.topH2}>子供が楽しめる電車スポットやイベントを紹介</h2>
         <Container maxWidth="lg" className={styles.container}>
-          <EmblaCarousel />
+          {/* <EmblaCarousel /> */}
           <New />
           <Static />
         </Container>
