@@ -32,7 +32,7 @@ export default async function StaticPage() {
                     <p className={styles.staticNewdate}>最終更新日：{time}</p>
                 </div>
                 <p className={styles.discription}>息子と一緒にお出かけした思い出を投稿しています。電車イベントだけでなく、旅行にもたくさん行っているので、もし同じ計画を立てている方がいれば少しでも参考になれば嬉しいです。</p>
-                <Static />
+                {/* <Static /> */}
             </div>
         <Footer />
     </>

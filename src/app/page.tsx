@@ -17,14 +17,14 @@ const Gamelist = dynamic(() => import('../../components/game/Gamelist'))
 export default function Page() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
         <h2 className={styles.topH2}>子供が楽しめる電車スポットやイベントを紹介</h2>
         <Container maxWidth="lg" className={styles.container}>
           {/* <EmblaCarousel /> */}
           {/* <New /> */}
           {/* <Static /> */}
         </Container>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
